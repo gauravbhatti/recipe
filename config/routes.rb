@@ -1,5 +1,7 @@
 Recipe::Application.routes.draw do
   
+  get "activations/create"
+
   resources :users
   
   resources :user_sessions
@@ -9,6 +11,8 @@ Recipe::Application.routes.draw do
   match 'logout' => 'user_sessions#destroy'
 
   match 'signup' => 'user#new'
+  
+  match '/activate/:activation_code' => 'activations#create', :as => :activate
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

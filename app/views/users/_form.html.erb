@@ -20,11 +20,11 @@
 </tr>
 <tr>
   <td><%= form.label :country %></td>
-  <td><%= form.text_field :country %></td>
+  <td><%= localized_country_select(:user, :country, [], :include_blank => 'Please choose...') %></td>
 </tr>
 <tr>
   <td><%= form.label :gender %></td>
-  <td><%= form.text_field :gender %></td>
+  <td><%= select :user, :gender, {:female=>false, :male=>true} %></td>
 </tr>
 <tr>
   <td><%= form.label :about_me %></td>

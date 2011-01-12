@@ -165,12 +165,18 @@ body{
 #user_session_submit:hover{
 	background:url(/images/but_login_hover.png) no-repeat;
 }
+
+#forgot{
+	margin-left:25px;
+	color:#E9B459;
+}
+
 #but_register{
 	background:url(/images/but_register.png) no-repeat;
 	width:144px;
   margin-left:170px;
   *margin-left:-45px;
-  margin-top:170px;
+  margin-top:150px;
 }
 #but_register:hover{
 	background:url(/images/but_register_hover.png) no-repeat;	

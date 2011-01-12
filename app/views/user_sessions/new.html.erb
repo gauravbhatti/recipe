@@ -6,4 +6,5 @@
   <span>or</span>
   <input type="submit" id="facebook_login" name="facebook_login" value="" />
 <% end %>
+<%= link_to_function "forgot password ?" , :onclick => "Modalbox.show('#{new_password_reset_path}', {title: 'Forgot Password', width: 600}); return false;", :id=>"forgot"%>
 <input type="submit" id="but_register" name="but_register" value="" onclick="Modalbox.show('users/new', {title: 'SignUp', width: 500}); return false;" />

@@ -1,0 +1,11 @@
+<div id="forgot_form">
+  Fill out the form below and instructions to reset your password will be emailed to you:<br />
+  <br />
+  <span id="notice"></span>
+  <% form_tag password_resets_path, :remote => true do %>
+    <label>Email:</label><br />
+    <%= text_field_tag "email" %><br />
+    <br />
+    <%= submit_tag "Reset my password" %>
+  <% end %>
+</div>

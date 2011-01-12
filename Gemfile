@@ -5,7 +5,9 @@ gem 'rails', '3.0.3'
 gem 'mysql', '2.8.1'
 gem 'haml'
 gem 'formtastic'
+gem 'rails3-generators'
 gem 'authlogic', :git => 'git://github.com/odorcicd/authlogic.git', :branch => 'rails3'
+gem 'dynamic_form'
 
 # Deploy with Capistrano
 # gem 'capistrano'

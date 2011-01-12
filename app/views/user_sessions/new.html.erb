@@ -1,0 +1,10 @@
+<% form_for(@user_session, :remote => true) do |f| %>
+  <%= f.error_messages %>
+  <%= f.text_field :login %>
+  <%= f.password_field :password %>
+  <%= f.submit "" %>
+  <span>or</span>
+  <input type="submit" id="facebook_login" name="facebook_login" value="" />
+<% end %>
+<input type="submit" id="but_register" name="but_register" value="" onclick="Modalbox.show('users/new', {title: 'SignUp', width: 600}); return false;; ; return false;" />
+<%= link_to_function "", :title =>"Sample Modalbox" , :onclick => "Modalbox.show('#', {title: 'Gaurav', width: 600}); return false;", :id=>"but_register" %>

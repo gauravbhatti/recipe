@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <%= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js"%>
+  <%= javascript_include_tag :defaults, "cufon", "Futura_Std_300.font" %>
+  <%= javascript_include_tag 'scriptaculous', 'builder' %>
+  <%= javascript_include_tag "modalbox" %>
+  <%= stylesheet_link_tag :all %>
+  <%= stylesheet_link_tag "modalbox", :media=> "screen" %> 
+  <%= csrf_meta_tag %>
+  <script>
+      Cufon.replace('.special_font');
+  </script>
+  <title>Recipe-Home</title>
+</head>
+<body class="home">
+  <div id="bg_home">
+  	<div id="all">
+  	  
+      <div id="header">
+        <a id="logo" href="#"><img src="images/logo.png" /></a>
+        <img id="top_text" src="images/img_top.png" alt="An extention of your kitchen where you share love for food & life" />
+        <a href="#" class="voice">&nbsp;&nbsp;&nbsp;&nbsp;</a>
+      </div>
+      
+      <div id="middle_content">
+          <div class="left_content">
+          	<div class="special_font top">
+                  <b class="title">Recipe organizer & shopping list</b>
+                  <span style="margin-left:0px;margin-top:-15px;display:block;">Organize and share all your recipes
+                  from books, blogs and links</span>
+              </div>
+              <div class="special_font bottom">
+                  Coming soon:
+                  - Forum cafes, reserve your own table for groups
+                  - Let us know what else you want!
+              </div>
+          </div>
+          <div class="right_content">
+          	<%=yield%>
+          </div>
+      </div>
+      
+      <div id="footer">
+        <ul class="social_media">
+        	<li><a href="#"><img src="images/social_media_one.png" /></a></li>
+        	<li><a href="#"><img src="images/social_media_two.png" /></a></li>
+        	<li><a href="#"><img src="images/social_media_three.png" /></a></li>
+        </ul>
+        <span class="copy">
+            © Copyright 2011 - Serving4eight. All Rights Reserved<br />
+            <a id="mailto" href="mailto:cook@serving4eight.com">cook@serving4eight.com</a>
+        </span>
+      </div>
+      
+  	</div>
+  </div>
+</body>
+
+</html>
+

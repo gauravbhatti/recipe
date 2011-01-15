@@ -11,7 +11,9 @@ class UserSessionsController < ApplicationController
     @user_session = UserSession.new(params[:user_session])
     if @user_session.save
       flash[:notice] = "Login successful!"
-      redirect_to user_path(current_user)
+      render :update do |page|
+        page.redirect_to root_url
+      end
     else
       render :update do |page|
         page.alert @user_session.errors.full_messages.map {|m| m + " "}

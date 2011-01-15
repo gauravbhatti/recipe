@@ -26,19 +26,21 @@ class UsersController < ApplicationController
 
   def show
     @user = @current_user
+    render :layout => "profile"
   end
 
   def edit
     @user = @current_user
+    render :layout => "profile"
   end
 
   def update
     @user = @current_user # makes our views "cleaner" and more consistent
     if @user.update_attributes(params[:user])
       flash[:notice] = "Account updated!"
-      redirect_to account_url
+      redirect_to user_path(@user)
     else
-      render :action => :edit
+      render :action => :edit, :layout => "profile"
     end
   end
 end

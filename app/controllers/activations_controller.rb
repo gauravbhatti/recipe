@@ -9,7 +9,7 @@ class ActivationsController < ApplicationController
       flash[:notice] = "Your account has been activated!"
       UserSession.create(@user, false) # Log user in manually
       @user.deliver_welcome!
-      redirect_to users_path
+      redirect_to user_path(@user)
     else
       render :action => :new
     end

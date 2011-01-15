@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <% javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js"%>
+  <%= javascript_include_tag :defaults, "cufon", "Futura_Std_300.font" %>
+  <%= javascript_include_tag 'scriptaculous', 'builder' %>
+  <%= javascript_include_tag "modalbox" %>
+  <%= stylesheet_link_tag "main" %>
+  <%= stylesheet_link_tag "modalbox", :media=> "screen" %> 
+  <%= csrf_meta_tag %>
+  <script>
+      Cufon.replace('.special_font');
+  </script>
+  <title>My Kitchen Chef</title>
+</head>
+
+<body>
+  <div id="header_2" style="background: url(/images/header_bg_content.jpg) center top repeat-x; width:; height:181px;">
+    <div class="wrap_976" style="width:976px; overflow:hidden; height:; margin:0 auto;">
+      <a href="index.html" id="logo"><img src="/images/internal_logo.png" style="float:left;" id="internal_logo"></a>
+      <%=render :partial => "/partials/login"%>
+    </div>
+  </div>
+  
+  <div class="wrap_976" style="margin:0 auto; width:976px;">
+    <div class="btns_menu" style="margin-top:26px;">
+        <%=render :partial => "/partials/left_menu"%>
+    </div>
+  
+    <div class="library_btn" style="margin-left: 235px; margin-bottom:-26px;">
+      <a href="full_recipe_library.html"><img src="/images/library_btn.png" /></a>
+    </div></div>
+  
+    <div id="body_2" style="background:url(/images/bg_body_all.png) no-repeat; width:976px; height:701px; margin-top:26px;"> 
+      <%=yield%>
+    </div>
+  </div>
+
+  <div id="footer_2" style="background:url(/images/bg_footer.png) center top repeat-x; height:88px;">
+    <%=render :partial => "/partials/second_footer"%>
+  </div>
+</body>
+</html>

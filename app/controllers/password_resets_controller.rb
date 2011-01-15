@@ -13,6 +13,7 @@ class PasswordResetsController < ApplicationController
       @user.deliver_password_reset_instructions!
       render :update do |page|
         page.replace_html "forgot_form", "Instructions to reset your password have been emailed to you. " + "Please check your email."
+        page.call "Modalbox.resizeToContent"
       end  
     else
       render :update do |page|

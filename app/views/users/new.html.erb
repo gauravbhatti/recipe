@@ -6,7 +6,7 @@
     <%= render :partial => "form", :object => f %>
     <tr>
       <td></td>
-      <td><%= f.submit "Submit" %></td>
+      <td><%= f.submit "Submit" %> <%=button_to_function "Cancel", "Modalbox.hide()"%></td>
     </tr>
   </table>
 <% end %>

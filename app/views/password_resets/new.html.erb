@@ -6,6 +6,6 @@
     <label>Email:</label><br />
     <%= text_field_tag "email" %><br />
     <br />
-    <%= submit_tag "Reset my password" %>
+    <%= submit_tag "Reset my password" %> <%=button_to_function "Cancel", "Modalbox.hide()"%>
   <% end %>
 </div>

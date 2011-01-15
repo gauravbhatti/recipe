@@ -40,7 +40,7 @@
 
 #MB_frame {
 	position: relative;
-	background-color: #EFEFEF;
+	background-color: #ece7d3;
 	height: 100%;
 }
 
@@ -84,8 +84,8 @@
 
 /* Color scheme */
 #MB_window {
-	background-color: #EFEFEF;
-	color: #000;
+	background-color: #ece7d3;
+	color: #461B0B;
 	
 	-webkit-box-shadow: 0 0 64px #000; 
 	-moz-box-shadow: #000 0 0 64px; 
@@ -107,10 +107,10 @@
 	#MB_content { border-top: 1px solid #F9F9F9; }
 
 	#MB_header {
-	  background-color: #DDD;
+	  background-color: #461B0B;
 	  border-bottom: 1px solid #CCC;
 	}
-		#MB_caption { color: #000 }
+		#MB_caption { color: #E9B459 }
 		#MB_close { color: #777 }
 		#MB_close:hover { color: #000 }
 

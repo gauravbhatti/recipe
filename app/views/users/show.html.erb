@@ -1,37 +1,27 @@
-<p>
-  <b>Login:</b>
-  <%=h @user.login %>
-</p>
+<div class="primary_apresentation" style="padding:44px 0 0 230px;">
+  <div class="portrait_image_about" style="float:left; margin-right:20px;">
+    <%= image_tag @user.avatar.url(:small) %><br/>
+    <%=link_to "Edit Profile", edit_user_path(@user)%>
+  </div>
+  <div class="title_name" style="font-size:32px; color:#aa6426; margin-bottom:35px; margin-top:15px;">
+    <%=@user.name%>
+  </div>
+  <div class="state_about" style="font-size:24px; margin-bottom:21px;">
+    <span class="title_minor" style="color:#7e441a;">State:</span>
+    <span class="content_minor" style="color:#aa6426;"><%=@user.state%></span>
+  </div>
+  <div class="country_about" style="font-size:24px; margin-bottom:21px;">
+    <span class="title_minor" style="color:#7e441a;">Country:</span>
+    <span class="content_minor" style="color:#aa6426;"><%=@user.country%></span>
+  </div>
+  <div class="gender_about" style="font-size:24px; margin-bottom:21px;">
+    <span class="title_minor" style="color:#7e441a;">Gender:</span>
+    <span class="content_minor" style="color:#aa6426;"><%=@user.sex%></span>
+  </div>
+</div>
 
-<p>
-  <b>Login count:</b>
-  <%=h @user.login_count %>
-</p>
-
-<p>
-  <b>Last request at:</b>
-  <%=h @user.last_request_at %>
-</p>
-
-<p>
-  <b>Last login at:</b>
-  <%=h @user.last_login_at %>
-</p>
-
-<p>
-  <b>Current login at:</b>
-  <%=h @user.current_login_at %>
-</p>
-
-<p>
-  <b>Last login ip:</b>
-  <%=h @user.last_login_ip %>
-</p>
-
-<p>
-  <b>Current login ip:</b>
-  <%=h @user.current_login_ip %>
-</p>
-
-
-<%# link_to 'Edit', edit_account_path %>
+<div class="swirl_vector" style="padding-left:233px; padding-top:12px;"><img src="/images/swirl_vegetables.png" /></div>
+<div class="title_about_me" style="padding-left:233px; font-size:22px; color:#7e441a; padding-top:22px;">About me:</div>
+<div class="content_about_me" style="font-size:19px; color:#aa6426; padding-left:243px; padding-right:45px; padding-top:12px; line-height:19px;">
+  <%=@user.about_me%>
+</div>

@@ -1,0 +1,687 @@
+/*----- Css Reset Begin -----*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td{
+	margin:0;
+	padding:0;
+	border:0;
+	outline:0;
+	font-size:100%;
+	vertical-align:baseline;
+	background:transparent;
+}
+body{
+	line-height:1;
+}
+ol, ul{
+	list-style:none;
+}
+a{
+	text-decoration:none;
+}
+img{
+	border:none;	
+}
+blockquote, q{
+	quotes:none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after{
+	content:'';
+	content:none;
+}
+/* remember to define focus styles! */
+:focus{
+	outline:;
+}
+/* remember to highlight inserts somehow! */
+ins{
+	text-decoration:none;
+}
+del{
+	text-decoration:line-through;
+}
+/* tables still need 'cellspacing="0"' in the markup */
+/*table{
+	border-collapse:collapse;
+	border-spacing:0;
+}*/
+
+.clearfix:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+ 
+.clearfix {
+	display: inline-block;
+}
+ 
+html[xmlns] .clearfix {
+	display: block;
+}
+ 
+* html .clearfix {
+	height: 1%;
+}
+
+/*----- Css Reset End -----*/
+.li_header:hover {
+	margin-top:-3px;
+}
+.fb_icon:hover {
+	margin-top:-2px;
+}
+.tw_icon:hover {
+	margin-top:-2px;
+}
+.plus_icon:hover {
+	margin-top:-2px;
+}
+body{
+	background-color:#290400;
+	font-family:"Futura";
+	font-size:11px;
+	line-height:15px;
+	overflow-x:hidden;
+	background: url(/images/bg_all.jpg) repeat-x center top;
+}
+#bg_home{
+	background:url(/images/bg_home.jpg) no-repeat center top transparent;
+	color:#fff;
+	height:600px;
+	position:absolute;
+	top:50%;
+	margin-top:-300px;
+	width:100%;
+}
+#all{
+	width:1000px;
+	margin:0 auto;
+	text-align:center;
+	color:#e9b459;
+	line-height:25px;
+}
+#header{
+	text-align:left;
+	float:left;
+	width:1000px;
+}
+#header #logo{
+	display:block;
+	float:left;	
+}
+#header #top_text{
+	margin-top:78px;
+}
+#header #logo img{
+	margin-top:25px;
+}
+#header .voice{
+    display:block;
+    height:39px;
+    margin-left:951px;
+    margin-top:-89px;
+    width:39px;
+}
+#middle_content{
+    float:left;
+    margin-left:35px;
+    margin-top:35px;
+    text-align:left;
+    width:965px;
+}
+.left_content{
+    float:left;
+    width:390px;
+	font-size:17px;
+}
+.right_content{
+    margin-left:615px;
+    *margin-left:225px;
+    margin-top:-115px;
+    position:absolute;
+    width:340px;
+}
+.home form #user_session_submit{
+	margin-left:44px !important;
+}
+.home form #user_session_submit,
+.home form #new_user_session,
+.home form span{
+	margin:23px 3px 0;
+}
+.special_font{
+	font-weight:bolder;
+}
+.special_font .title{
+	color:#e9c259;
+	font-size:28px;
+	margin-bottom:8px;
+	display:block;
+}
+
+#user_session_login,
+#user_session_password{
+    background-color:#461B0B;
+    border:1px solid #8B6110;
+    color:#A96426;
+    font-size:20px;
+    margin:0 0 10px 23px;
+    padding:5px;
+    width:280px;
+}
+#facebook_login,
+#user_session_submit,
+#but_register{
+	background:url(/images/but_facebook_login.png) no-repeat;
+	border:none;
+	width:121px;
+	height:31px;
+	cursor:pointer;
+}
+#facebook_login:hover{
+	background:url(/images/but_facebook_login_hover.png) no-repeat;
+}
+#user_session_submit{
+	background:url(/images/but_login.png) no-repeat;
+}
+#user_session_submit:hover{
+	background:url(/images/but_login_hover.png) no-repeat;
+}
+
+#forgot{
+	margin-left:25px;
+	color:#E9B459;
+}
+
+#but_register{
+	background:url(/images/but_register.png) no-repeat;
+	width:144px;
+  margin-left:170px;
+  *margin-left:-45px;
+  margin-top:150px;
+}
+#but_register:hover{
+	background:url(/images/but_register_hover.png) no-repeat;	
+}
+.home #middle_content .left_content .top,
+.home #middle_content .left_content .bottom{
+	margin:10px 0;	
+}
+
+#edit_forgot{
+	margin-left:25px;
+}
+
+#edit_forgot #user_submit{
+	background:url(/images/update.png) no-repeat;
+	border:none;
+	height:32px;
+	width:122px;
+	margin-top:10px;
+}
+
+#edit_forgot #user_password,
+#edit_forgot #user_password_confirmation{
+	background-color:#461B0B;
+  border:1px solid #8B6110;
+  color:#A96426;
+  font-size:20px;
+  padding:5px;
+  width:280px;
+}
+.home #middle_content .left_content .top,
+.home #middle_content .left_content .bottom{
+	margin:10px 0;	
+}
+#footer{
+	width:1000px;
+	height:98px;
+	clear:both;
+	float:left;
+	text-align:left;
+	margin-top:105px;
+	*margin-top:55px;
+}
+.social_media{
+    float:left;
+    margin-left:57px;
+    margin-top:10px;
+	overflow:hidden;
+}
+#footer .social_media li{
+	float:left;
+	margin-right:11px;
+}
+#footer .social_media li a{
+	display:block;
+}
+#footer .social_media li a img:hover{
+	margin-top:-2px;
+}
+#footer .copy{
+    display:block;
+    float:right;
+    font-family:arial;
+    line-height:15px;
+    margin-right:25px;
+    margin-top:32px;
+    text-align:right;	
+}
+#footer #mailto{
+	color:#E9B459;	
+}
+#footer #mailto:hover{
+	font-weight:bold;
+	text-decoration:underline;
+}
+.inside #header{
+	background:url(/images/inside_header_bg.jpg) no-repeat;
+	height:180px;
+	width:100%;
+}
+.inside #content{
+	background-color:#3b0900;
+	background:url(images/bg_content.jpg) repeat;
+	float:left;
+	width:100%;
+}
+.inside #footer{
+	background:url(/images/footer_bg.jpg) no-repeat;
+	color:#fff;
+    height:70px;
+    width:100%;
+	margin-top:0;
+}
+.inside #footer .copy{
+    margin-top:20px;
+	margin-right:50px;
+}
+.inside .left_header_bg{
+	background:url(/images/left_footer_bg.jpg) no-repeat;
+	height:71px;
+	float:left;
+	width:201px;
+}
+.inside .right_header_bg{
+	background:url(/images/right_footer_bg.jpg) no-repeat;
+	height:70px;
+	float:right;
+	width:188px;
+}
+.inside .center_layout{
+	width:1000px;
+	text-align:left;
+	margin:0 auto;
+}
+#internal_logo{
+    margin-top:30px;
+}
+.inside #content .center_layout{
+	background:url(/images/content_background.jpg) repeat-y;
+	margin-top:80px;
+	padding-bottom:30px;
+}
+.inside .side_menu{
+    height:337px;
+    margin-left:-87px;
+    margin-top:-55px;
+    position:absolute;
+    width:292px;
+	background:url(/images/my_k_2.png) no-repeat;
+}
+.inside .side_menu li{
+    margin-bottom:-85px;
+    margin-left:119px;
+    margin-top:105px;
+}
+.inside .side_menu li a{
+	color:#8f3e02;
+	font-size:18px;
+	font-weight:bolder;
+}
+.inside #informations_about_me{
+	float:right;
+	margin:50px 120px 0 0;
+	width:660px;
+	height:240px;
+	background:url(/images/bottom_bg_about.png) no-repeat scroll center bottom transparent;
+}
+.inside #informations_about_me ul{
+	float:left;
+    margin-left:20px;
+    margin-top:40px;
+	line-height:20px;
+}
+.inside #informations_about_me ul li{
+	color:#7e441a;
+    font-size:22px;
+    margin-bottom:8px;
+}
+.inside #informations_about_me ul li span{
+	color:#aa6426;
+}
+.inside #informations_about_me img{
+	float:left;
+}
+.inside #informations_about_me .name{
+    color:#AA6426;
+    display:block;
+    font-size:32px;
+    margin-left:195px;
+    margin-top:20px;
+}
+.inside .content_text{
+    float:left;
+    margin-left:216px;
+    width:660px;
+	color:#aa6426;
+	font-size:20px;
+	line-height:25px;
+	margin-top:15px;
+}
+.inside .content_text h2{
+	color:#7e441a;	
+}
+.inside .content_text p{
+	margin:20px;
+}
+.inside #header .center_layout #logo{
+	display:block;
+    margin-left:65px;
+}
+
+.portrait_image_about a{
+	font-size:16px;
+	color:#aa6426;
+}
+
+.portrait_image_about img{
+	border:5px solid #8B6110;
+	margin-bottom:10px;
+}
+
+.inside #footer .center_layout{
+	background:url("/images/bg_center_footer.png") repeat-y scroll 0 -19px transparent;
+	height:70px;
+	width:998px;
+}
+.inside #footer .social_media{
+    margin-left:57px;
+    margin-top:-14px;
+}
+.inside #header #header_important_links{
+	float:right;
+	margin-right:20px;
+}
+.inside #header .login_area{
+	color:#cc9933;
+    float:left;
+    font-size:20px;
+    line-height:30px;
+    margin-left:20px;
+    margin-top:25px;
+    width:133px;
+}
+.inside #header #header_important_links ul{
+    clear:both;
+    float:left;
+    margin-right:30px;
+    margin-top:20px;
+}
+.inside #header #header_important_links ul li{
+	float:left;
+	margin-right:10px;
+}
+.inside #header #header_important_links ul li img:hover{
+	margin-top:-2px;
+}
+.welcome{
+	color:#aa6426;	
+}
+.welcome .name{
+	font-size:22px;
+	color:#cc9933;
+}
+.log_out{
+	font-size:14px;	
+}
+.log_out a{
+	color:#cc9933;
+}
+.share_text{
+    display:block;
+    float:left;
+    margin-left:45px;
+    margin-top:-15px;
+    width:100px;
+	color:#e0b954;
+	font-weight:bold;	
+}
+.side_my_menus{
+    float:left;
+    margin-left:30px;
+    margin-top:290px;	
+}
+.my_menus .content_text{
+    margin-left:35px;
+}
+.my_menus .content_text img{
+	border:1px solid #e7b36f;
+	margin:10px 10px 0 0;
+}
+.my_menus .content_text h1{
+	font-size:60px;
+	color:#9c3b07;
+	margin:20px 0 30px;
+}
+.my_menus .content_text h2{
+	font-size:26px;
+	color:#aa6426;
+	margin:15px 0 0;
+}
+.my_menus .content_text h3{
+	font-size:20px;
+	color:#b95017;
+	margin:0 0 15px;
+}
+.bottom_flower_content{
+	border:none !important;	
+}
+.but_reciple{
+	float:right;
+    margin:20px 100px;
+}
+.side_my_menus{
+	font-size:18px;
+	line-height:25px;
+	width:185px;
+}
+.side_my_menus a{
+	color:#b68228;	
+}
+.side_my_menus .options_my_menus{
+	font-weight:bold;
+	display:block;
+	height:40px;
+}
+.side_my_menus .options_my_menus span{
+    display:block;
+    float:left;
+    margin-top:10px;
+    text-align:left;
+}
+.side_my_menus .options_my_menus img{
+    margin:10px 5px 0 0;
+    vertical-align:middle;
+	float:left;
+}
+.side_my_menus ul{
+    border-top:1px solid #d6b08f;
+    margin-top:10px;
+    padding-top:10px;	
+}
+.side_my_menus h2{
+	color:#b68228;
+	margin-top:25px;
+}
+.side_my_menus ul li span{
+	color:#b68228;
+}
+.side_my_menus ul li img{
+	margin:0 5px 0 0;
+}
+#icons_faster_link{
+    margin-left:560px;
+    margin-top:-55px;
+    position:absolute;
+}
+#icons_faster_link ul li{
+	float:left;
+}
+#icons_faster_link img{
+	border:none;
+}
+.library_top_but{
+    margin-left:223px;
+    margin-top:-51px;
+    position:absolute;
+}
+.my_menus .library_top_but{
+    margin-left:-690px;
+}
+.library_top_but_open{
+    margin-left:-450px;
+    margin-top:-51px;
+    position:absolute;
+}
+#left_content{
+	float:left;
+}
+#right_content{
+	float:right;
+}
+.full_recipe_library #left_content{
+	width:670px;
+}
+.inside .content_text{
+	width:670px;
+	margin-left:28px;
+}
+.my_kicthen .content_text{
+	margin-left:216px;
+}
+#right_content .side_my_menus{
+    margin-top:0;
+	margin-right:50px;
+}
+.kitchen_img_cut{
+    margin-left:-750px;
+    margin-top:-59px;
+    position:absolute;	
+}
+.full_recipe_library .side_my_menus{
+	margin-top:20px;
+	margin-left:28px;
+	clear:both;
+}
+.full_recipe_library #icons_faster_link{
+	margin-top:-40px;
+}
+#title_recipe{
+	margin-bottom:15px;
+}
+.full_recipe_library #cook_atributes img{
+	border:1px solid #e7b36f;
+	float:left;
+}
+.full_recipe_library #cook_atributes p{
+	float:right;
+	width:380px;
+}
+.full_recipe_library #cook_atributes ul{
+	float:left;
+	margin-left:30px;
+}
+#how_to_cook_atributes{
+	float:left;
+}
+#comments_place{
+	float:left;
+}
+#cook_atributes{
+	float:left;
+}
+.full_recipe_library #how_to_cook_atributes ul{
+	float:none;
+}
+#description_cook_box{
+    background:url(/images/right_box_top.png) no-repeat scroll 0 0 transparent;
+    float:left;
+    height:298px;
+    margin:25px 23px 5px 0;
+    width:303px;
+}
+#description_cook_box ul{
+    float:left;
+    margin-left:50px;
+    margin-top:154px;
+}
+#description_cook_box ul li{
+	margin:4px 0;
+	font-size:14px;
+	color:#d6920d;
+}
+.star_ratings{
+	float:right;
+}
+.star_ratings img{
+	border:none !important;
+	margin-top:3px;
+}
+.text_kitchen_cut{
+	color:#fff;
+    font-size:20px;
+    margin-left:-407px;
+    margin-top:19px;
+}
+#full_background{
+	background:url(/images/repeat_to_end_bg.png) repeat-x;
+}
+#orange_line{
+	background:url(/images/orange_line_top_footer.png) no-repeat;
+    clear:both;
+    height:20px;
+    margin:0 auto;
+    text-align:center;
+    width:999px;
+}
+#content_bg_layout{
+	background:url(/images/top_content_bg.png) no-repeat;
+    height:20px;
+    margin-left:332px;
+    margin-top:80px;
+    text-align:center;
+	position:absolute;
+    width:999px;
+}
+
+#edit_profile{
+	margin-left:220px;
+	font-size:16px;
+	color:#aa6426;
+}
+
+#edit_profile h1{
+	padding-top:20px;
+}

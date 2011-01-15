@@ -8,6 +8,7 @@ gem 'formtastic'
 gem 'rails3-generators'
 gem 'authlogic', :git => 'git://github.com/odorcicd/authlogic.git', :branch => 'rails3'
 gem 'dynamic_form'
+gem "paperclip", "~> 2.3"
 
 # Deploy with Capistrano
 # gem 'capistrano'

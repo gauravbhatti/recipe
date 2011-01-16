@@ -401,16 +401,6 @@ body{
     margin-left:65px;
 }
 
-.portrait_image_about a{
-	font-size:16px;
-	color:#aa6426;
-}
-
-.portrait_image_about img{
-	border:5px solid #8B6110;
-	margin-bottom:10px;
-}
-
 .inside #footer .center_layout{
 	background:url("/images/bg_center_footer.png") repeat-y scroll 0 -19px transparent;
 	height:70px;
@@ -684,4 +674,60 @@ body{
 
 #edit_profile h1{
 	padding-top:20px;
+}
+
+.portrait_image_about{
+	float:left;
+	margin-right:20px;
+}
+
+.portrait_image_about a{
+	font-size:16px;
+	color:#aa6426;
+}
+
+.portrait_image_about img{
+	border:5px solid #8B6110;
+	margin-bottom:10px;
+}
+
+.primary_apresentation .title_name{
+	font-size:32px;
+	color:#aa6426;
+	margin-bottom:35px;
+	margin-top:15px;
+}
+
+.user_about{
+	font-size:24px;
+	margin-bottom:21px;
+}
+
+.user_about .title_minor{
+	color:#7e441a;
+}
+
+.user_about .content_minor{
+	color:#aa6426;
+}
+
+.swirl_vector{
+	padding-left:233px;
+	padding-top:12px;
+}
+
+.title_about_me{
+	padding-left:233px;
+	font-size:22px;
+	color:#7e441a;
+	padding-top:22px;
+}
+
+.content_about_me{
+	font-size:19px;
+	color:#aa6426;
+	padding-left:243px;
+	padding-right:45px;
+	padding-top:12px;
+	line-height:19px;
 }

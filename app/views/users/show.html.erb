@@ -1,27 +1,25 @@
 <div class="primary_apresentation" style="padding:44px 0 0 230px;">
-  <div class="portrait_image_about" style="float:left; margin-right:20px;">
+  <div class="portrait_image_about">
     <%= image_tag @user.avatar.url(:small) %><br/>
     <%=link_to "Edit Profile", edit_user_path(@user)%>
   </div>
-  <div class="title_name" style="font-size:32px; color:#aa6426; margin-bottom:35px; margin-top:15px;">
+  <div class="title_name">
     <%=@user.name%>
   </div>
-  <div class="state_about" style="font-size:24px; margin-bottom:21px;">
-    <span class="title_minor" style="color:#7e441a;">State:</span>
-    <span class="content_minor" style="color:#aa6426;"><%=@user.state%></span>
+  <div class="user_about">
+    <span class="title_minor">State:</span>
+    <span class="content_minor"><%=@user.state%></span>
   </div>
-  <div class="country_about" style="font-size:24px; margin-bottom:21px;">
-    <span class="title_minor" style="color:#7e441a;">Country:</span>
-    <span class="content_minor" style="color:#aa6426;"><%=@user.country%></span>
+  <div class="user_about">
+    <span class="title_minor">Country:</span>
+    <span class="content_minor"><%=@user.country%></span>
   </div>
-  <div class="gender_about" style="font-size:24px; margin-bottom:21px;">
-    <span class="title_minor" style="color:#7e441a;">Gender:</span>
-    <span class="content_minor" style="color:#aa6426;"><%=@user.sex%></span>
+  <div class="user_about">
+    <span class="title_minor">Gender:</span>
+    <span class="content_minor"><%=@user.sex%></span>
   </div>
 </div>
 
-<div class="swirl_vector" style="padding-left:233px; padding-top:12px;"><img src="/images/swirl_vegetables.png" /></div>
-<div class="title_about_me" style="padding-left:233px; font-size:22px; color:#7e441a; padding-top:22px;">About me:</div>
-<div class="content_about_me" style="font-size:19px; color:#aa6426; padding-left:243px; padding-right:45px; padding-top:12px; line-height:19px;">
-  <%=@user.about_me%>
-</div>
+<div class="swirl_vector"><img src="/images/swirl_vegetables.png" /></div>
+<div class="title_about_me">About me:</div>
+<div class="content_about_me"><%=@user.about_me%></div>

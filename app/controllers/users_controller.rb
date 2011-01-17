@@ -31,7 +31,7 @@ class UsersController < ApplicationController
 
   def edit
     @user = @current_user
-    render :layout => "profile"
+    render :layout => "source"
   end
 
   def update

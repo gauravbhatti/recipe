@@ -93,7 +93,7 @@ body{
 	font-size:11px;
 	line-height:15px;
 	overflow-x:hidden;
-	background: url(/images/bg_all.jpg) repeat-x center top;
+	background: url(/images/bg_all.jpg) repeat center top;
 }
 #bg_home{
 	background:url(/images/bg_home.jpg) no-repeat center top transparent;
@@ -665,6 +665,30 @@ body{
 	position:absolute;
     width:999px;
 }
+
+.lineactivate:hover {
+	background-color:#e5b5a1;
+	overflow:hidden;
+	cursor:pointer;
+	color:#fff;
+}
+.tag1 {
+	background:url(/images/tag1.png) no-repeat; height:19px; padding-left:5px; float:left; width:45px; padding-top:1px;
+}
+.tag1:hover {
+	background:url(/images/tag1hover.jpg) no-repeat; height:19px; padding-left:5px; float:left; width:45px; padding-top:1px;
+}
+.tag2 {
+	background:url(/images/tag2.png) no-repeat; height:19px; padding-left:15px; float:left; width:83px; padding-top:1px;
+}
+.tag2:hover {
+	background:url(/images/tag2hover.jpg) no-repeat; height:19px; padding-left:15px; float:left; width:83px; padding-top:1px;
+}
+.tag3 {
+	background:url(/images/tag3.png) no-repeat; height:19px; padding-left:15px; float:left; width:72px; padding-top:1px;
+}
+
+/* remember to define by gauravjeet */
 
 #edit_profile{
 	margin-left:220px;

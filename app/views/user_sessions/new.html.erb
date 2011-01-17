@@ -1,7 +1,7 @@
 <% form_for(@user_session, :remote => true) do |f| %>
   <%= f.error_messages %>
-  <%= f.text_field :login, :title => "Email or login" %>
-  <%= f.password_field :password, :title => "password" %>
+  <%= f.text_field :login, :value => "Email or login", :onclick => "doClear(this)" %>
+  <%= f.password_field :password, :value => "password", :onclick => "doClear(this)" %>
   <%= f.submit "" %>
   <span>or</span>
   <input type="submit" id="facebook_login" name="facebook_login" value="" />

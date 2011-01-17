@@ -1,0 +1,164 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <% javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js"%>
+  <%= javascript_include_tag :defaults, "cufon", "Futura_Std_300.font" %>
+  <%= javascript_include_tag 'scriptaculous', 'builder' %>
+  <%= javascript_include_tag "modalbox" %>
+  <%= stylesheet_link_tag "main" %>
+  <%= stylesheet_link_tag "modalbox", :media=> "screen" %> 
+  <%= csrf_meta_tag %>
+  <title>Books Page</title>
+  <script>
+      Cufon.replace('.special_font');
+  </script>
+  <script language="javascript">
+  function doClear(theText){
+   if (theText.value == theText.defaultValue){
+           theText.value = ''
+   }
+  }
+  </script>
+</head>
+
+<body>
+<div id="header_2" style="background: url(/images/header_bg_content.jpg) center top repeat-x; width:; height:181px;">
+  <div class="wrap_976" style="width:976px; overflow:hidden; height:; margin:0 auto;"> 
+    <a href="index.html" id="logo"><img src="/images/internal_logo.png" style="float:left;" id="internal_logo"></a>
+    <%=render :partial => "/partials/login"%>
+  </div>
+</div>
+
+<div class="wrap_976" style="margin:0 auto; width:976px;">
+  <div class="btns_menu" style="margin-top:26px;">
+    <div class="menu_global" style="background:url(/images/my_k_2.png) no-repeat; position:absolute; padding-top:99px; padding-left:120px; width:192px; height:247px; margin:-4px 0 0 -88px;">
+      <div class="chef_menu" style="margin-bottom:24px;"><a href="/users/show"><img src="/images/chef_menu.png" /></a></div>
+      <div class="friends_menu" style="margin-bottom:15px;"><a href="#"><img src="/images/friends_menu.png" /></a></div>
+      <div class="shelves_menu_marked" style="margin-bottom:18px;"><a href="#"><img src="/images/shelves_menu_mark.png" /></a></div>
+      <div class="my_menus_link" style="margin-bottom:23px;"><a href="#"><img src="/images/my_menus.png" /></a></div>
+    </div>
+    <div class="submenu_global" style="background:url(/images/line_fade.png) center bottom no-repeat; position:absolute; width:592px; height:30px; padding-bottom:1px; margin:40px 0 0 368px;">
+      <div class="space_submenu" style="float:left; width:122px; height:100%;"></div>
+      <div class="submenu_books" style="float:left; margin-right:11px;"><a href="#"><img src="/images/sub_btn_books.png" /></a></div>
+      <div class="submenu_magazines" style="float:left; margin-right:11px;"><a href="#"><img src="/images/sub_btn_magazines.png" /></a></div>
+      <div class="submenu_websites" style="float:left; margin-right:11px;"><a href="#"><img src="/images/sub_btn_website.png" /></a></div>
+      <div class="submenu_recipes" style="float:left;"><a href="#"><img src="/images/sub_btn_recipe.png" /></a></div>
+    </div>
+    <div class="space_btn_displayed" style="margin-left: 235px; margin-bottom:-26px;"><img src="/images/space_btn.png" /></div>
+  </div>
+  <!-- content on body -->
+  <div id="body_2" style="background:url(/images/bg_body_all_book.png) no-repeat; width:976px; height:1151px; margin-top:26px;">
+    <div class="top_content_body" style="height:112px;">
+      <div class="space_left_body" style="width:242px; height:112px; float:left;"></div>
+      <div class="btn_add_book" style="padding-top:86px; float:left;">
+        <a href="#"><img src="/images/add_book_btn.png" /></a>
+      </div>
+      <%=render :partial => "/partials/search"%>
+    </div>
+    <div class="space_content" style="height:22px;"></div>
+    <div class="left_body" style="width:231px; float:left;">
+      <div class="spaceonleft" style="height:162px;"></div>
+      <div class="createmenu_btn" style="margin:0 0 15px 20px;"><a href="#"><img src="/images/create_new_menu_btn.png" /></a></div>
+      <div class="editmenu" style="margin:0 0 18px 20px;"><a href="#"><img src="/images/edit_my_menu_btn.png" /></a></div>
+      <div class="line_under_menu" style="height:1px; background:url(/images/line_divider.png) center top no-repeat;"></div>
+      <div class="mymenu_title" style="margin:18px 0 14px 24px;"><img src="/images/mymenus_title.png" /></div>
+      <!-- category 1 -->
+      <div class="list_mymenu_2lines" style="height:59px; width:220px; background:#efece0; border:1px solid #dad3a3; margin-left:-1px; -moz-border-radius:0 11px 11px 0 ; border-radius:0 11px 11px 0 ; -webkit-border-radius:0 11px 11px 0 ; ">
+        <div class="spacer_adjustment" style="height:9px;"></div>
+        <div class="btns_in_left" style="float:left; margin-left:14px; width:84px;">
+          <div class="btns_left" style="width:21px; height:20px; float:left; margin-right:5px;"><a href="#"><img src="/images/shopping_small.png" /></a></div>
+          <div class="btns_left" style="width:21px; height:20px; float:left; margin-right:5px;"><a href="#"><img src="/images/mail_small.png" /></a></div>
+          <div class="btns_left" style="width:21px; height:20px; float:left;"><a href="#"><img src="/images/print_small.png" /></a></div>
+        </div>
+        <div class="text_category" style="font-size:20px; padding-top:1px; float:right; line-height:20px; width:106px; color:#b68228; margin-right:13px;">Christmas Eve Loren</div>
+      </div>
+      <!-- category 2 -->
+      <div class="list_mymenu_1line" style="height:39px; width:220px; margin-left:-1px; ">
+        <div class="spacer_adjustment" style="height:9px;"></div>
+        <div class="btns_in_left" style="float:left; margin-left:14px; width:84px;">
+          <div class="btns_left" style="width:21px; height:20px; float:left; margin-right:5px;"><a href="#"><img src="/images/shopping_small.png" /></a></div>
+          <div class="btns_left" style="width:21px; height:20px; float:left; margin-right:5px;"><a href="#"><img src="/images/mail_small.png" /></a></div>
+          <div class="btns_left" style="width:21px; height:20px; float:left;"><a href="#"><img src="/images/print_small.png" /></a></div>
+        </div>
+        <div class="text_category" style="font-size:20px; padding-top:1px; float:right; line-height:20px; width:106px; color:#b68228; margin-right:13px;">Snacks</div>
+      </div>
+
+      <!-- end categories -->
+    </div>
+    <!-- center -->
+    <div class="center_body" style="width:508px; height:19px; float:left;">
+      <div class="top_main_table" style="overflow:hidden;">
+        <div class="tags_center" style="float:left; width:247px; color:#fff; font-size:12px; ">
+          <div class="tag1"><a href="#" style="color:#fff;">Tags</a></div>
+          <div class="tag2"><a href="#" style="color:#fff;">Mains Course</a></div>
+          <div class="tag3"><a href="#" style="color:#fff;">Chicken</a><a href="#"><img src="/images/close_tag.png"  style="margin-left:4px; margin-top:2px;"/></a></div>
+        </div>
+        <div class="nav_table" style="float:left; color:#c66a3d; font-size:14px; margin-left:80px;">
+          <table border="0" cellspacing="0" cellpadding="0" width="180">
+            <tr>
+              <td width="70"><a href="#" style="color:#c66a3d;">« Previous</a></td>
+              <td width="15"><a href="#" style="color:#c66a3d;">1</a></td>
+              <td width="14"><a href="#" style="color:#c66a3d;">2</a></td>
+              <td width="19"><a href="#" style="color:#c66a3d;">3</a></td>
+              <td width="62"><a href="#" style="color:#c66a3d;">Next »</a></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div class="main_table" style="margin-top:10px; font-size:15px; color:#847c50;">
+        <div class="title_main_table" style="width:508px; height:28px;"><img src="/images/title_main_table.png" border="0" usemap="#Map" />
+          <map name="Map" id="Map">
+            <area shape="rect" coords="16,6,52,22" href="#" />
+            <area shape="rect" coords="212,10,269,24" href="#" />
+            <area shape="rect" coords="339,8,390,25" href="#" />
+            <area shape="rect" coords="456,11,499,22" href="#" />
+          </map>
+        </div>
+        <div class="body_bg_main_table" style="background:url(/images/bg_main_table.jpg) repeat; border-left:1px solid #dad3a3; overflow:hidden; border-bottom:1px solid #dad3a3; border-right:1px solid #dad3a3;"> 
+          <!-- start line -->
+          <div class="lineactivate" style="overflow:hidden;">
+            <div class="" style="height:20px; float:left; padding-top:8px; padding-left:16px; width:183px; border-right:1px solid #dad3a3;">Book This</div>
+            <div class="" style="height:20px; width:113px; padding-top:8px; padding-left:14px; float:left; border-right:1px solid #dad3a3;">Author Book</div>
+            <div class="" style="height:23px; width:115px; padding-top:5px; padding-left:5px; float:left; border-right:1px solid #dad3a3;"><img src="/images/star_rate.png" /><img src="/images/star_rate.png" /><img src="/images/star_rate.png" /></div>
+            <div class="" style="height:23px; width:52px; padding-top:5px; padding-left:5px; float:left;"><a href="#"><img src="/images/close_table.png" style="padding-left:12px;"/></a></div>
+          </div>
+          <!-- end line-->  
+
+        </div>
+      </div>
+      <div class="spacer_jump" style="height:50px;"></div>
+      <div class="top_title_nav_second" style="margin-bottom:10px;"><img src="/images/other_recipe.png" style="margin-left:6px;" />
+        <div class="link_right_table" style="float:right; margin-right:10px; margin-top:4px;"><a href="#" style="color:#bb450f; font-size:15px;">View All</a></div>
+      </div>
+      <div class="title_main_table" style="width:508px; height:28px;"><img src="/images/title_second.png" /></div>
+      <div class="body_bg_second_table" style="background:url(/images/bg_table_2.png) repeat; border-left:1px solid #dad3a3; overflow:hidden; border-bottom:1px solid #dad3a3; font-size:15px; color:#847C50; border-right:1px solid #dad3a3;"> 
+        <!-- start line -->
+        <div class="lineactivate" style="overflow:hidden;">
+          <div class="" style="height:20px; float:left; padding-top:8px; padding-left:16px; width:402px; border-right:1px solid #dad3a3;">Recipe 1</div>
+          <div class="" style="height:23px; width:40px; padding-top:5px; padding-left:17px; float:left;"><a href="#"><img src="/images/plus_icon.png" style="padding-left:12px;"/></a></div>
+        </div>
+        <!-- end line--> 
+        
+      </div>
+    </div>
+    <!-- right -->
+    <div class="right_body" style="width:237px; float:right;">
+      <div class="yourtags" style="background:#eeece0; width:218px; margin-right:-1px; -webkit-border-radius:11px 0 0 11px; float:right; -moz-border-radius:11px 0 0 11px; border-radius:11px 0 0 11px; border:1px solid #dad3a3;">
+        <div class="contentintag_title" style="margin:17px 17px 1px 12px; overflow:hidden;">
+          <div class="title" style="float:left; font-size:16px; color:#99340b;">Your Tags</div>
+          <div class="edittag" style="float:right;"><a href="#" style="font-size:13px; color:#bb450f;"><img src="/images/edit_icon.png" />Edit</a></div>
+        </div>
+        <div class="border_dashed_title" style="background:url(/images/dashed.png) repeat-x; height:2px; margin-top:12px; overflow:hidden;"></div>
+        <div class="tags_writed" style="margin-left:17px; margin-right:17px; margin-bottom:14px; margin-top:14px; font-size:14px; line-height:16px;"><a href="#" style="color:#c66a3d;">Loren | Ipsun | Dolor | Sit | Amet | Consectetur | Adiplishing | Reloans | Nooby</a></div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end content -->
+</div>
+<div id="footer_2" style="background:url(/images/bg_footer.png) center top repeat-x; height:88px;">
+  <%=render :partial => "/partials/second_footer"%>
+</div>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<% form_for(@source, :url =>sources_path(:source_type=>params[:type]), :remote => true) do |f| %>
+  <table cellpadding="0" cellspacing="10" border="0" width="100%">
+    <tr>
+      <td colspan="2" id="errors"></td>
+    </tr>
+    <tr>
+      <td><%= f.label :title %></td>
+      <td><%= f.text_field :title %></td>
+    </tr>
+    <tr>
+      <td><%= f.label :url %></td>
+      <td><%= f.text_field :url %></td>
+    </tr>
+    <tr>
+      <td><%= f.label :author %></td>
+      <td><%= f.text_field :author %></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td><%= f.submit "Submit" %> <%=button_to_function "Cancel", "Modalbox.hide()"%></td>
+    </tr>
+  </table>
+<% end %>

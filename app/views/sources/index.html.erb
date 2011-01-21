@@ -1,0 +1,66 @@
+<div class="top_content_body" style="height:112px;">
+  <div class="space_left_body" style="width:242px; height:112px; float:left;"></div>
+  <div class="btn_add_book" style="padding-top:86px; float:left;">
+    <%= link_to_function image_tag("/images/add_book_btn.png") , 
+                :onclick => "Modalbox.show('#{new_source_path(:type=>params[:type])}', 
+                                  {title: 'Add #{params[:type].capitalize}', width: 500}); return false;"%>
+  </div>
+  <%=render :partial => "/partials/search"%>
+</div>
+<div class="space_content" style="height:22px;"></div>
+<div class="left_body" style="width:231px; float:left;">
+  <%=render :partial => "/partials/menus"%>
+</div>
+<div class="center_body" style="width:508px; height:19px; float:left;">
+  <div class="top_main_table" style="overflow:hidden;">
+    <div class="tags_center" style="float:left; color:#fff; font-size:12px; ">
+      <div class="tag1"><a href="#" style="color:#fff;">Tags</a></div>
+      <div class="tag2"><a href="#" style="color:#fff;">Mains Course</a></div>
+      <div class="tag3"><a href="#" style="color:#fff;">Chicken</a>
+        <a href="#"><img src="images/close_tag.png"  style="margin-left:4px; margin-top:2px;"/></a>
+      </div>
+      <div style="float:left;"><form action="#" method="get" enctype="application/x-www-form-urlencoded" name="tags">
+        <input name="insertag" type="text" style="font-size:9px; height:12px; margin:0 5px 0 5px; float:left;" value="tag" size="5" />
+        <input name="insert" type="submit" value="insert" style="float:left; background:url(images/insert.png) no-repeat transparent; width:18px; height:17px; border:none; text-indent:-9999px; cursor:pointer;"/>
+        </form>
+      </div>
+    </div>
+    <div class="nav_table" style="float:left; color:#c66a3d; font-size:14px; margin-left:10px;">
+      <table border="0" cellspacing="0" cellpadding="0" width="180">
+        <tr>
+          <td><%= will_paginate @sources %></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <div class="main_table" style="margin-top:10px; font-size:15px; color:#847c50;">
+    <div class="title_main_table" style="width:508px; height:28px;"><img src="/images/title_main_table.png" border="0" usemap="#Map" />
+      <map name="Map" id="Map">
+        <area shape="rect" coords="16,6,52,22" href="#" />
+        <area shape="rect" coords="212,10,269,24" href="#" />
+        <area shape="rect" coords="339,8,390,25" href="#" />
+        <area shape="rect" coords="456,11,499,22" href="#" />
+      </map>
+    </div>
+    <div class="body_bg_main_table" style="background:url(/images/bg_main_table.jpg) repeat; border-left:1px solid #dad3a3; overflow:hidden; border-bottom:1px solid #dad3a3; border-right:1px solid #dad3a3;"> 
+      <span id="source_type_table">
+        <% @sources.each do |source| %>
+          <%=render :partial => "source_type", :locals=>{:source => source}%>
+        <%end%>
+      </span>
+    </div>
+  </div>
+  <div class="spacer_jump" style="height:50px;"></div>
+  <div class="top_title_nav_second" style="margin-bottom:10px;"><img src="/images/other_recipe.png" style="margin-left:6px;"/>
+    <div class="link_right_table" style="float:right; margin-right:10px; margin-top:4px;"><a href="#" style="color:#bb450f; font-size:15px;">View All</a></div>
+  </div>
+  <div class="title_main_table" style="width:508px; height:28px;"><img src="/images/title_second.png" /></div>
+  <div class="body_bg_second_table" style="background:url(/images/bg_table_2.png) repeat; border-left:1px solid #dad3a3; overflow:hidden; border-bottom:1px solid #dad3a3; font-size:15px; color:#847C50; border-right:1px solid #dad3a3;"> 
+    <!-- start line -->
+    <div class="lineactivate" style="overflow:hidden;">
+      <div class="" style="height:20px; float:left; padding-top:8px; padding-left:16px; width:402px; border-right:1px solid #dad3a3;">Recipe 1</div>
+      <div class="" style="height:23px; width:40px; padding-top:5px; padding-left:17px; float:left;"><a href="#"><img src="/images/plus_icon.png" style="padding-left:12px;"/></a></div>
+    </div>
+    <!-- end line--> 
+  </div>
+</div>

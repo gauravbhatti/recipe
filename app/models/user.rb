@@ -10,6 +10,8 @@ class User < ActiveRecord::Base
   validates_attachment_size :avatar, :less_than => 5.megabytes
   validates_attachment_content_type :avatar, :content_type => ['image/jpeg', 'image/png', 'image/jpg']
   
+  has_many :sources
+  
   def self.find_by_login_or_email(login)
     User.find_by_login(login) || User.find_by_email(login)
   end

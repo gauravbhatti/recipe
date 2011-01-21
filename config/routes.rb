@@ -6,6 +6,11 @@ Recipe::Application.routes.draw do
   
   resources :user_sessions
   resources :password_resets
+  resources :sources
+  
+  match 'books' => 'sources#index', :type => "book"
+  match 'magazines' => 'sources#index', :type => "magazine"
+  match 'websites_blogs' => 'sources#index', :type => "website/blog"
 
   match 'login' => 'user_sessions#new'
   match 'logout' => 'user_sessions#destroy'

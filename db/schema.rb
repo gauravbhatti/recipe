@@ -10,7 +10,17 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110113170313) do
+ActiveRecord::Schema.define(:version => 20110117172628) do
+
+  create_table "sources", :force => true do |t|
+    t.integer  "user_id"
+    t.string   "source_type", :null => false
+    t.string   "title"
+    t.string   "author"
+    t.string   "url"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", :force => true do |t|
     t.string   "login",                                  :null => false

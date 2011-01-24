@@ -29,13 +29,23 @@ class SourcesController < ApplicationController
   end
   
   def show
-    @source = current_user.sources.find_by_id(params[:id])
+    @source = Source.find_by_id(params[:id])
+    render :layout => "recipe"
   end
   
   def edit
+    @source = current_user.sources.find_by_id(params[:id])
+    render :layout => "recipe"
   end
   
   def update
+    @source = current_user.sources.find_by_id(params[:id])
+    if @source.update_attributes(params[:source])
+      flash[:notice] = "Account updated!"
+      redirect_to source_path(@source)
+    else
+      render :action => :edit, :layout => "recipe"
+    end
   end
   
   def destroy

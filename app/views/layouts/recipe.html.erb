@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Full recipe Page</title>
+<script type="text/javascript">
+function MM_preload/images() { //v3.0
+  var d=document; if(d./images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preload/images.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+</script>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <% javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js"%>
+  <%= javascript_include_tag :defaults, "cufon", "Futura_Std_300.font" %>
+  <%= javascript_include_tag 'scriptaculous', 'builder' %>
+  <%= javascript_include_tag "modalbox" %>
+  <%= stylesheet_link_tag "main" %>
+  <%= stylesheet_link_tag "modalbox", :media=> "screen" %> 
+  <%= csrf_meta_tag %>
+  <title>Sources Page</title>
+  <script>
+      Cufon.replace('.special_font');
+  </script>
+  <script language="javascript">
+  function doClear(theText){
+   if (theText.value == theText.defaultValue){
+           theText.value = ''
+   }
+  }
+  </script>
+</head>
+
+<body>
+  <div id="header_2">
+    <div class="wrap_976"> 
+      <%=link_to image_tag("/images/internal_logo.png"), books_path, :id=>"internal_logo"%>
+      <%=render :partial => "/partials/login"%>
+    </div>
+  </div>
+<div class="wrap_976" style="margin:0 auto; width:976px;">
+  <div class="" style="position:absolute; width:145px; height:117px; background:url(/images/menutag.png) no-repeat; margin:0px 0 0 232px;">
+    <div class="text_tg" style="color:#d9d9d9; font-size:20px; margin-top:71px; text-align:center;"><%=@source.source_type%></div>
+  </div>
+  <div class="btns_menu" style="margin-top:26px;">
+    <div class="menu_global_closed" style="background:url(/images/my_kitcthen_closed.png) no-repeat; position:absolute; padding-top:20px; padding-left:120px; width:192px; height:32px; margin:2px 0 0 -84px;">
+    </div>
+    <div class="space_btn_displayed2" style="margin-left: 235px; margin-bottom:-26px;">
+      <img src="/images/space_btn.png" />
+    </div>
+  </div>
+  <div id="body_3" style="background:url(/images/bg_body_content.jpg) repeat-y; -moz-border-radius:8px 8px 0 0; -webkit-border-radius:8px 8px 0 0; border-radius:8px 8px 0 0; width:976px; margin-top:26px; overflow:hidden;">
+  <%=yield%>
+  </div>
+</div>
+<!-- end content -->
+</div>
+<div id="footer_2" style="background:url(/images/bg_footer.png) center top repeat-x; height:88px;">
+  <%=render :partial => "/partials/second_footer"%>
+</div>
+</body>
+</html>

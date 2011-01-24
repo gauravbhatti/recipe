@@ -5,6 +5,11 @@
     <img src="/images/star_rate.png" /><img src="/images/star_rate.png" /><img src="/images/star_rate.png" />
   </div>
   <div class="source_delete" style="height:23px; width:40px; padding-top:5px; padding-left:15px; float:left;">
-  <%=link_to_remote image_tag('/images/close_table.png', :title=>"Delete"), :url=>source_path(source), :method=>"delete", 
-		:confirm=>"Are you sure ?"%></div>
+    <%if source.user == current_user%>
+      <%=link_to_remote image_tag('/images/close_table.png', :title=>"Delete"), 
+              :url=>source_path(source), :method=>"delete", :confirm=>"Are you sure ?"%>
+    <%else%>
+      <%=link_to_function image_tag("/images/close_table.png"), "alert('You are not allowed to this action.')"%>
+    <%end%>
+	</div>
 </div>

@@ -6,7 +6,12 @@ Recipe::Application.routes.draw do
   
   resources :user_sessions
   resources :password_resets
-  resources :sources
+  resources :sources do
+    collection do
+      get 'upload_image'
+      post 'save_image'
+    end
+  end
   
   match 'books' => 'sources#index', :type => "book"
   match 'magazines' => 'sources#index', :type => "magazine"

@@ -1,5 +1,114 @@
-<div style="margin:20px 0px 0px 200px;font-size:20px;color:#C66A3D;">
-  <p><b>Title</b>: <%=@source.title%></p>
-  <p><b>Url</b><%=@source.url%></p>
-  <p><b>Author</b><%=@source.author%></p>
-</div>
+<!-- content on body -->
+  <div class="top_content_body_2" style="height:112px; overflow:hidden;">
+    <div class="menu_left_up" style="width:242px; height:99px; float:left;">
+      <div class="spacer_left_menu" style="margin-top:23px;"></div>
+      <div class="content_adds" style="margin-left:25px; margin-bottom:10px; border-bottom:1px solid #dab392; padding-bottom:6px;"><a href="#"><img src="/images/add_to_shelves.png" /></a></div>
+      <div class="content_adds" style="margin-left:25px; margin-bottom:10px; border-bottom:1px solid #dab392; padding-bottom:6px;"><a href="#"><img src="/images/add_to_mymenus.png" /></a></div>
+    </div>
+  </div>
+  <!-- left -->
+  <div class="left_content_full_recipe" style="float:left; width:589px; overflow:hidden;">
+    <div class="content_left_sidea" style="margin:19px 0 0 26px;">
+      <div class="titleinright" style="font-size:27px; color:#99340b;"><%=@source.title%>
+        <div class="btns_title_right_top" style="float:right;">
+          <a href="#"><img src="/images/mail_big.png" style="float:left; margin-right:8px;" /></a>
+          <a href="#"><img src="/images/print_big.png" style="float:left;" /></a>
+        </div>
+      </div>
+      <div class="img_content_cook" style="overflow:hidden; width:589px;">
+        <div class="recipe_preview" style="width:235px; height:215px; float:left; margin:18px 30px 0 0; border:1px solid #e7b36f;">
+        <%if @source.photo?%>
+          <%= image_tag @source.photo.url(:medium) %>
+        <%else%>
+          <%= image_tag "/images/no-image2.jpg" %>
+        <%end%>
+        </div>
+        <div class="cook_name" style="float:left; overflow:hidden; width:296px; margin-top:18px;">
+          <div class="cookname" style="margin-bottom:6px;">
+            <span style="color:#d58c4c; font-size:20px;">Title</span>
+            <span style="float:right; font-size:15px; color:#aa6426;"><%=@source.title%></span>
+          </div>
+          <div class="mmmfactor" style="margin-bottom:6px;">
+            <span style="color:#d58c4c; font-size:20px;">Rating</span>
+            <span class="stars_rating" style="float:right;"><img src="/images/star_rate.png" /><img src="/images/star_rate.png" /><img src="/images/star_rate.png" /><img src="/images/star_rate.png" /><img src="/images/star_rate.png" /></span>
+          </div>
+          <div class="difficulty" style="margin-bottom:6px;">
+            <span style="color:#d58c4c; font-size:20px;">Url</span>
+            <span style="float:right; font-size:15px; color:#aa6426;"><%=@source.url%></span>
+          </div>
+          <div class="server_quantity" style="margin-bottom:16px;">
+            <span style="color:#d58c4c; font-size:20px;">Author</span>
+            <span style="float:right; font-size:15px; color:#aa6426;"><%=@source.author%></span>
+          </div>
+          <div class="text_loren">
+            <span style="font-size:15px; color:#aa6426;"></span>
+          </div>
+        </div>
+      </div>
+      <div style="margin-top:20px;font-size:15px;">
+        <%if @source.user == current_user%>
+          <%=link_to "edit #{@source.source_type}", edit_source_path(@source), :style=>"color:#d58c4c;"%>
+        <%end%>
+      </div>
+      <div class="comments_writeandsend" style="overflow:hidden;">
+        <div class="titlecomment" style="margin:19px 0 6px 0;"><span class="redtitle" style="color:#99340b; font-size:20px;">Comments</span></div>
+        <form action="#" method="post" enctype="multipart/form-data" name="comments">
+          <div class="boxcomment">
+            <textarea name="writecooment" cols="92" rows="5"></textarea>
+          </div>
+          <div class="btn_addcomment" style="float:right; overflow:hidden; margin-top:10px; margin-bottom:15px;">
+            <input name="Add Comment" type="submit" style="background:url(/images/add_comment.png) transparent no-repeat; text-indent:-9999px; border:none; cursor:pointer; width:121px; height:31px;" value="Add Comment"  />
+          </div>
+        </form>
+      </div>
+      
+      <!-- comment preview -->
+      <div class="previewcomment" style="background:#f2f0e2; margin-bottom:15px; margin-left:-26px; border-top:1px solid #ba9b8c; overflow:hidden; border-bottom:1px solid #ba9b8c; padding-top:16px; padding-right:16px; padding-bottom:12px; padding-left:28px;">
+        <div class="commentin" style="width:84px; height:87px; float:left; overflow:hidden; margin-right:20px;"><img src="/images/img_incomment.png" /></div>
+        <div class="name_author_comment" style="color:#550000; font-size:18px; overflow:hidden; margin-bottom:2px; height:19px;">Agatha says:</div>
+        <div class="date_comment" style="color:#550000; overflow:hidden; margin-bottom:2px; font-size:10px;">11/13/2011 - 12:00pm </div>
+        <div class="content_commented" style="color:#aa6426; overflow:hidden; font-size:15px;">dolor sit amet consecteturLoren ipsun dolor sit amet consecteturLoren ipsun dolor sitdolor sit amet consecteturLoren ipsun dolor sit amet consecteturLoren ipsun dolor sit </div>
+      </div>
+      
+    </div>
+  </div>
+  
+  <!-- right -->
+  <div class="right_content_full_recipe" style="float:right;">
+  
+  <div class="1right" style="height:47px; width:337px; background:#efece0; border:1px solid #dad3a3; margin-right:-1px; -moz-border-radius:11px 0 0 11px ; border-radius:11px 0 0 11px ; -webkit-border-radius:11px 0 0 11px ; "><div class="tag_img" style="position:absolute; margin: 6px 0 0 -30px; background:url(/images/tagimg.png) no-repeat; width:35px; height:35px;"></div>
+    <a href="#"><img src="/images/other_title.png" style="margin:8px 0 0 16px;" /></a></div>
+  
+      <div class="1right" style="height:47px; width:337px; background:#efece0; border:1px solid #dad3a3; margin-right:-1px; -moz-border-radius:11px 0 0 11px ; border-radius:11px 0 0 11px ; -webkit-border-radius:11px 0 0 11px ; "><div class="tag_img" style="position:absolute; margin: 6px 0 0 -30px; background:url(/images/tagimg.png) no-repeat; width:35px; height:35px;"></div>
+        <a href="#"><img src="/images/your_title.png" style="margin:15px 0 0 16px;" /></a>
+    <div style="float:right; margin:15px 15px 0 0;"><a href="#"><img src="/images/edit_icon.png" /><span style="font-size:15px; color:#bb450f;">edit</span></a></div></div>
+      
+          <div class="1right" style="height:47px; width:337px; background:#efece0; border:1px solid #dad3a3; margin-right:-1px; -moz-border-radius:11px 0 0 11px ; border-radius:11px 0 0 11px ; -webkit-border-radius:11px 0 0 11px ; "><div class="tag_img" style="position:absolute; margin: 6px 0 0 -30px; background:url(/images/tagimg.png) no-repeat; width:35px; height:35px;"></div>
+            <a href="#"><img src="/images/other_title2.png" style="margin:15px 0 0 16px;" /></a>
+    <div style="float:right; margin:15px 15px 0 0;"><a href="#"><span style="font-size:15px; color:#bb450f;">View All</span></a></div></div>
+  
+  <div class="right_body" style="width:231px; float:right;">
+    <div class="mymenu_title2" style="margin:18px 13px 14px 0px; text-align:right;"><img src="/images/mymenus_title.png" /></div>
+    <!-- category 1 -->
+    <div class="list_mymenu_2lines2" style="height:59px; width:230px; background:#efece0; border:1px solid #dad3a3; margin-right:-1px; -moz-border-radius:11px 0 0 11px ; border-radius:11px 0 0 11px ; -webkit-border-radius:11px 0 0 11px ; ">
+      <div class="spacer_adjustment2" style="height:9px;"></div><div class="text_category" style="font-size:20px; padding-top:1px; float:left; line-height:20px; width:118px; color:#b68228; margin-left:13px;">Christmas Eve Loren</div>
+      <div class="btns_in_left" style="float:right; margin-left:14px; width:84px;">
+        <div class="btns_left" style="width:21px; height:20px; float:left; margin-right:5px;"><a href="#"><img src="/images/shopping_small.png" /></a></div>
+        <div class="btns_left" style="width:21px; height:20px; float:left; margin-right:5px;"><a href="#"><img src="/images/mail_small.png" /></a></div>
+        <div class="btns_left" style="width:21px; height:20px; float:left;"><a href="#"><img src="/images/print_small.png" /></a></div>
+      </div>
+    </div>
+    <!-- category 2 -->
+    <div class="list_mymenu_1line2" style="height:39px; width:230px; margin-right:-1px; ">
+      <div class="spacer_adjustment2" style="height:9px;"></div><div class="text_category2" style="font-size:20px; padding-top:1px; float:left; line-height:20px; width:116px; color:#b68228; margin-left:13px;">Snacks</div>
+      <div class="btns_in_left2" style="float:right; margin-left:14px; width:84px;">
+        <div class="btns_left2" style="width:21px; height:20px; float:left; margin-right:5px;"><a href="#"><img src="/images/shopping_small.png" /></a></div>
+        <div class="btns_left2" style="width:21px; height:20px; float:left; margin-right:5px;"><a href="#"><img src="/images/mail_small.png" /></a></div>
+        <div class="btns_left2" style="width:21px; height:20px; float:left;"><a href="#"><img src="/images/print_small.png" /></a></div>
+      </div>
+    </div>
+    <!-- end categories -->
+  </div>
+  
+  
+  </div>

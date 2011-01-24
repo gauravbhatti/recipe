@@ -1,0 +1,27 @@
+<div style="margin:20px 0px 0px 200px;color:#C66A3D;padding-top:40px;min-height:500px;font-size:15px;">
+  <h1>Edit <%=@source.source_type.capitalize%></h1>
+  <%= form_for @source, :html => { :multipart => true } do |f| %>
+    <table cellpadding="0" cellspacing="10" border="0" width="100%">
+      <tr>
+        <td><%= f.label :title %></td>
+        <td><%= f.text_field :title %></td>
+      </tr>
+      <tr>
+        <td><%= f.label :url %></td>
+        <td><%= f.text_field :url %></td>
+      </tr>
+      <tr>
+        <td><%= f.label :author %></td>
+        <td><%= f.text_field :author %></td>
+      </tr>
+      <tr>
+        <td>Image</td>
+        <td><%= f.file_field :photo %></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td><%= f.submit "Update" %> <%=button_to_function "Cancel", "history.back()"%></td>
+      </tr>
+    </table>
+  <% end %>
+</div>

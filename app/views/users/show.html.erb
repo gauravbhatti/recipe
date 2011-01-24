@@ -1,6 +1,10 @@
 <div class="primary_apresentation" style="padding:44px 0 0 230px;">
   <div class="portrait_image_about">
-    <%= image_tag @user.avatar.url(:small) %><br/>
+    <%if @user.avatar?%>
+      <%= image_tag @user.avatar.url(:small) %>
+    <%else%>
+      <%=image_tag "/images/no-image.jpg"%>
+    <%end%><br/>
     <%=link_to "Edit Profile", edit_user_path(@user)%>
   </div>
   <div class="title_name">

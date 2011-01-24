@@ -25,7 +25,7 @@
 <body>
 <div id="header_2">
   <div class="wrap_976"> 
-    <a href="index.html" id="logo"><img src="/images/internal_logo.png" id="internal_logo"></a>
+    <%=link_to image_tag("/images/internal_logo.png"), books_path, :id=>"internal_logo"%>
     <%=render :partial => "/partials/login"%>
   </div>
 </div>

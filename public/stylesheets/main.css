@@ -807,3 +807,53 @@ body{
 	float:left;
 	border-right:1px solid #dad3a3;
 }
+
+.btn_addcomment{
+	float:right;
+	overflow:hidden;
+	margin-top:10px;
+	margin-bottom:15px;
+}
+
+.btn_addcomment input{
+	background:url(/images/add_comment.png) transparent no-repeat;
+	text-indent:-9999px;
+	border:none;
+	cursor:pointer;
+	width:121px;
+	height:31px;
+}
+
+.previewcomment{
+	background:#f2f0e2;
+	margin:0px 0px 15px -26px;
+	border-top:1px solid #ba9b8c;
+	overflow:hidden;
+	border-bottom:1px solid #ba9b8c;
+	padding:16px 16px 12px 28px;
+}
+
+.previewcomment .name_author_comment{
+	color:#550000;
+	font-size:18px;
+	margin-bottom:2px;
+	height:19px;
+}
+
+.previewcomment .commentin{
+	width:84px;
+	height:87px;
+	float:left;
+	margin-right:20px;
+}
+
+.previewcomment .date_comment{
+	color:#550000;
+	margin-bottom:2px;
+	font-size:10px;
+}
+
+.previewcomment .content_commented{
+	color:#aa6426;
+	font-size:15px;
+}

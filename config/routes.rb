@@ -13,9 +13,11 @@ Recipe::Application.routes.draw do
     end
   end
   
+  resources :comments
+  
   match 'books' => 'sources#index', :type => "book"
   match 'magazines' => 'sources#index', :type => "magazine"
-  match 'websites_blogs' => 'sources#index', :type => "website/blog"
+  match 'websites_blogs' => 'sources#index', :type => "website_blog"
 
   match 'login' => 'user_sessions#new'
   match 'logout' => 'user_sessions#destroy'

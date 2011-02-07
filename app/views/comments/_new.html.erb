@@ -1,0 +1,9 @@
+<% remote_form_for Comment.new do |f| %>
+  <%= f.error_messages %>
+  <%= f.hidden_field 'commentable_type', :value => @source.source_type %>
+  <%= f.hidden_field 'commentable_id', :value => @source.id %>
+  <%= f.text_area :comment, {:rows=>"5", :cols=>"92"}%>
+  <div class="btn_addcomment">
+    <%= f.submit "" %>
+  </div>
+<% end %>

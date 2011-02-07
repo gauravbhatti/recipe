@@ -3,7 +3,7 @@ class User < ActiveRecord::Base
   
   validates_presence_of :name, :state, :country
   
-  has_attached_file :avatar, :styles => { :medium => "200x118!", :small => "160x160#" },
+  has_attached_file :avatar, :styles => { :medium => "200x118!", :small => "160x160#", :minor => "80x80#" },
                     :url  => "/assets/users/:id/:style/:basename.:extension",
                     :path => "#{Rails.root}/public/assets/users/:id/:style/:basename.:extension"
 
@@ -11,6 +11,7 @@ class User < ActiveRecord::Base
   validates_attachment_content_type :avatar, :content_type => ['image/jpeg', 'image/png', 'image/jpg']
   
   has_many :sources
+  has_many :comments
   
   def self.find_by_login_or_email(login)
     User.find_by_login(login) || User.find_by_email(login)

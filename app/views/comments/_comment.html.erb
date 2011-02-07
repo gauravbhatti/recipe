@@ -1,0 +1,16 @@
+<div class="previewcomment" id="comment_<%=comment.id%>">
+  <div class="commentin">
+    <%if comment.user.avatar?%>
+      <%= image_tag comment.user.avatar.url(:minor) %>
+    <%else%>
+      <%=image_tag "/images/no-image.jpg"%>
+    <%end%>
+  </div>
+  <div class="name_author_comment"><%=comment.user.name%> says:
+    <div style="float:right;">
+      <%=link_to_remote image_tag('/images/close_table.png'), :title=>"Delete", :url=>comment_path(comment), :method=>"delete", :confirm=>"Are you sure ?"%>
+    </div>
+  </div>
+  <div class="date_comment"><%=comment.created_at.strftime("%m/%d/%y - %H:%M")%></div>
+  <div class="content_commented"><%=comment.comment%> </div>
+</div>

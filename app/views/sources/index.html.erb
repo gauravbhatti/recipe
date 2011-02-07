@@ -1,7 +1,7 @@
 <div class="top_content_body" style="height:112px;">
   <div class="space_left_body" style="width:242px; height:112px; float:left;"></div>
   <div class="btn_add_book" style="padding-top:86px; float:left;">
-    <%= link_to_function image_tag("/images/add_book_btn.png") , 
+    <%= link_to_function image_tag("/images/add_#{params[:type]}_btn.png") , 
                 :onclick => "Modalbox.show('#{new_source_path(:type=>params[:type])}', 
                                   {title: 'Add #{params[:type].capitalize}', width: 500}); return false;"%>
   </div>

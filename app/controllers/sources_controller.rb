@@ -9,7 +9,7 @@ class SourcesController < ApplicationController
   end
   
   def index
-    @sources = Source.paginate(:all, :conditions => {:source_type => params[:type]}, :page => params[:page], :per_page => 5)
+    @sources = current_user.sources.paginate(:all, :conditions => {:source_type => params[:type]}, :page => params[:page], :per_page => 5)
   end
   
   def create

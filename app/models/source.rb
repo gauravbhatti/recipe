@@ -1,5 +1,6 @@
 class Source < ActiveRecord::Base
   belongs_to :user
+  has_many :comments, :as => :commentable
   
   validates_presence_of :title
   
@@ -10,6 +11,6 @@ class Source < ActiveRecord::Base
   validates_attachment_size :photo, :less_than => 5.megabytes
   validates_attachment_content_type :photo, :content_type => ['image/jpeg', 'image/png', 'image/jpg']
   
-  TYPES = ["book", "magazine", "website/blog", "other"]
+  TYPES = ["book", "magazine", "website_blog", "other"]
   
 end

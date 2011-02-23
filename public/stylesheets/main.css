@@ -777,7 +777,7 @@ body{
 	line-height:19px;
 }
 
-.source_title{
+.lineactivate .title{
 	height:20px;
 	float:left;
 	padding-top:8px;
@@ -786,11 +786,11 @@ body{
 	border-right:1px solid #dad3a3;
 }
 
-.source_title a{
+.lineactivate .title a{
 	color:#847C50;
 }
 
-.source_author{
+.lineactivate .author{
 	height:20px;
 	width:113px;
 	padding-top:8px;
@@ -799,13 +799,21 @@ body{
 	border-right:1px solid #dad3a3;
 }
 
-.source_rating{
+.lineactivate .rating{
 	height:23px;
 	width:115px;
 	padding-top:5px;
 	padding-left:5px;
 	float:left;
 	border-right:1px solid #dad3a3;
+}
+
+.lineactivate .delete{
+	height:23px;
+	width:40px;
+	padding-top:5px;
+	padding-left:15px;
+	float:left;"
 }
 
 .btn_addcomment{

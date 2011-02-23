@@ -1,0 +1,6 @@
+<%if @recipes%>
+  <%@recipes.each do |recipe|%>
+    <div class="" style="height:20px; float:left; padding-top:8px; padding-left:16px; width:402px; border-right:1px solid #dad3a3;"><%=link_to recipe.title, recipe_path(recipe.id), :style=>"color:#847C50;"%></div>
+    <div class="" style="height:23px; width:40px; padding-top:5px; padding-left:17px; float:left;"><a href="#"><img src="/images/plus_icon.png" style="padding-left:12px;"/></a></div>
+  <%end%>
+<%end%>

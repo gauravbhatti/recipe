@@ -1,0 +1,44 @@
+<% form_for(@recipe, :url =>recipes_path, :remote => true) do |f| %>
+  <table cellpadding="0" cellspacing="10" border="0" width="100%">
+    <tr>
+      <td colspan="2" id="errors"></td>
+    </tr>
+    <tr>
+      <td><%= f.label :title %></td>
+      <td><%= f.text_field :title %></td>
+    </tr>
+    <tr>
+      <td><%= f.label :author %></td>
+      <td><%= f.text_field :author %></td>
+    </tr>
+    <tr>
+      <td><%= f.label :source %></td>
+      <td colspan="2"><%=select :source, :name, Source::TYPES.collect{|c| c}, {:include_blank=>true},
+					{:onchange=>"showSubSourceTypes(this.value)"}%>
+			<span id="book" class='sub_source_types' style="display:none;"><%=select(:recipe, :source_id, Source.find(:all, :conditions=>{:source_type => "book"}).collect{|s| [ s.title, s.id ] })%></span>
+			<span id="magazine" class='sub_source_types' style="display:none;"><%=select(:recipe, :source_id, Source.find(:all, :conditions=>{:source_type => "magazine"}).collect{|s| [ s.title, s.id ] })%></span>
+			<span id="website_blog" class='sub_source_types' style="display:none;"><%=select(:recipe, :source_id, Source.find(:all, :conditions=>{:source_type => "website_blog"}).collect{|s| [ s.title, s.id ] })%></span>
+		  </td>
+    </tr>
+    <tr>
+      <td><%= f.label :summary %></td>
+      <td><%= f.text_area :summary, {:rows=>"4", :cols=>"26"} %></td>
+    </tr>
+    <tr>
+      <td><%= f.label :ingredients %></td>
+      <td><%= f.text_area :ingredients, {:rows=>"4", :cols=>"26"} %></td>
+    </tr>
+    <tr>
+      <td><%= f.label :how_to_make %></td>
+      <td><%= f.text_area :how_to_make, {:rows=>"4", :cols=>"26"} %></td>
+    </tr>
+    <tr>
+      <td><%= f.label :serves %></td>
+      <td><%= f.text_field :serves %></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td><%= f.submit "Submit" %> <%=button_to_function "Cancel", "Modalbox.hide()"%></td>
+    </tr>
+  </table>
+<% end %>

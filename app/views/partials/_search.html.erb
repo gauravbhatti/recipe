@@ -4,7 +4,11 @@
       <input name="result" type="submit" value="Pesquisar" style="background: url(/images/btn_search_box.png) no-repeat transparent; border:none; cursor:pointer; width:29px; height:30px; text-indent:-9999px;" />
     </div>
     <div class="bg_search_box" style="background:url(/images/bg_search_box.png) no-repeat; float:left; width:198px; height:30px;">
-      <input name="search_text" type="text" onclick="doClear(this)" value="Search in <%=params[:type].pluralize%>" style="width:178px; height:24px; background:transparent; border:none; padding-left:5px; padding-top:4px; color:#f3ab82; font-size:18px;" />
+      <%if params[:type]%>
+        <input name="search_text" type="text" onclick="doClear(this)" value="Search in <%=params[:type].pluralize%>" style="width:178px; height:24px; background:transparent; border:none; padding-left:5px; padding-top:4px; color:#f3ab82; font-size:18px;" />
+      <%else%>
+        <input name="search_text" type="text" onclick="doClear(this)" value="Search in recipes" style="width:178px; height:24px; background:transparent; border:none; padding-left:5px; padding-top:4px; color:#f3ab82; font-size:18px;" />
+      <%end%>
     </div>
   </div>
 </form>

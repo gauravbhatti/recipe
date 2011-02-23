@@ -1,0 +1,42 @@
+<div style="margin:20px 0px 0px 200px;color:#C66A3D;padding-top:40px;min-height:500px;font-size:15px;">
+<h1>Edit Recipe</h1>
+<% form_for @recipe, :html => { :multipart => true } do |f| %>
+  <table cellpadding="0" cellspacing="10" border="0" width="100%">
+    <tr>
+      <td colspan="2" id="errors"></td>
+    </tr>
+    <tr>
+      <td><%= f.label :title %></td>
+      <td><%= f.text_field :title %></td>
+    </tr>
+    <tr>
+      <td><%= f.label :author %></td>
+      <td><%= f.text_field :author %></td>
+    </tr>
+    <tr>
+      <td><%= f.label :summary %></td>
+      <td><%= f.text_area :summary, {:rows=>"6", :cols=>"36"} %></td>
+    </tr>
+    <tr>
+      <td><%= f.label :ingredients %></td>
+      <td><%= f.text_area :ingredients, {:rows=>"6", :cols=>"36"} %></td>
+    </tr>
+    <tr>
+      <td><%= f.label :how_to_make %></td>
+      <td><%= f.text_area :how_to_make, {:rows=>"6", :cols=>"36"} %></td>
+    </tr>
+    <tr>
+      <td><%= f.label :serves %></td>
+      <td><%= f.text_field :serves %></td>
+    </tr>
+    <tr>
+      <td>Image</td>
+      <td><%= f.file_field :image %></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td><%= f.submit "Submit" %> <%=button_to_function "Cancel", "history.back()"%></td>
+    </tr>
+  </table>
+<% end %>
+</div>

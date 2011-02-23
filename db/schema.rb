@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110124175904) do
+ActiveRecord::Schema.define(:version => 20110209174607) do
 
   create_table "comments", :force => true do |t|
     t.string   "title",            :limit => 50, :default => ""
@@ -25,6 +25,23 @@ ActiveRecord::Schema.define(:version => 20110124175904) do
   add_index "comments", ["commentable_id"], :name => "index_comments_on_commentable_id"
   add_index "comments", ["commentable_type"], :name => "index_comments_on_commentable_type"
   add_index "comments", ["user_id"], :name => "index_comments_on_user_id"
+
+  create_table "recipes", :force => true do |t|
+    t.string   "title",              :null => false
+    t.string   "author"
+    t.integer  "user_id",            :null => false
+    t.integer  "source_id"
+    t.text     "summary"
+    t.text     "ingredients"
+    t.text     "how_to_make"
+    t.integer  "serves"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+  end
 
   create_table "sources", :force => true do |t|
     t.integer  "user_id"

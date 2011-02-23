@@ -9,7 +9,8 @@ class SourcesController < ApplicationController
   end
   
   def index
-    @sources = current_user.sources.paginate(:all, :conditions => {:source_type => params[:type]}, :page => params[:page], :per_page => 5)
+    @sources = current_user.sources.paginate(:all, :order=>"created_at DESC", :conditions => {:source_type => params[:type]}, 
+                                                                                            :page => params[:page], :per_page => 10)
   end
   
   def create
@@ -53,8 +54,16 @@ class SourcesController < ApplicationController
     @source.destroy
     if request.xhr?
       render :update do |page|
-        page.remove "book_#{params[:id]}"
+        page.remove "source_#{params[:id]}"
       end
+    end
+  end
+  
+  def other_recipes
+    source = current_user.sources.find_by_id(params[:id])
+    @recipes = source.recipes.find(:all)
+    render :update do |page|
+      page.replace_html "other_recipes", :partial => "source_recipes", :locals=>{:recipes=>@recipes}
     end
   end
   

@@ -1,6 +1,7 @@
 class Source < ActiveRecord::Base
   belongs_to :user
   has_many :comments, :as => :commentable
+  has_many :recipes
   
   validates_presence_of :title
   

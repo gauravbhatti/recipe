@@ -12,6 +12,7 @@ class User < ActiveRecord::Base
   
   has_many :sources
   has_many :comments
+  has_many :recipes
   
   def self.find_by_login_or_email(login)
     User.find_by_login(login) || User.find_by_email(login)

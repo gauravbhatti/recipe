@@ -1,4 +1,4 @@
-Recipe::Application.routes.draw do
+OnlineRecipe::Application.routes.draw do
   
   get "activations/create"
 
@@ -10,10 +10,12 @@ Recipe::Application.routes.draw do
     collection do
       get 'upload_image'
       post 'save_image'
+      get 'other_recipes'
     end
   end
   
   resources :comments
+  resources :recipes
   
   match 'books' => 'sources#index', :type => "book"
   match 'magazines' => 'sources#index', :type => "magazine"

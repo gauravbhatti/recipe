@@ -28,7 +28,7 @@
     <div class="nav_table" style="float:left; color:#c66a3d; font-size:14px; margin-left:10px;">
       <table border="0" cellspacing="0" cellpadding="0" width="180">
         <tr>
-          <td><%= will_paginate @sources %></td>
+          <td><%= will_paginate @sources, :prev_label=>"&laquo;", :next_label=>"&raquo;" %></td>
         </tr>
       </table>
     </div>
@@ -51,15 +51,14 @@
     </div>
   </div>
   <div class="spacer_jump" style="height:50px;"></div>
-  <div class="top_title_nav_second" style="margin-bottom:10px;"><img src="/images/other_recipe.png" style="margin-left:6px;"/>
+  <div class="top_title_nav_second" style="margin-bottom:10px;color:#cf805c;font-size:14px;">Other recipes from this <%=params[:type]%> 
     <div class="link_right_table" style="float:right; margin-right:10px; margin-top:4px;"><a href="#" style="color:#bb450f; font-size:15px;">View All</a></div>
   </div>
   <div class="title_main_table" style="width:508px; height:28px;"><img src="/images/title_second.png" /></div>
   <div class="body_bg_second_table" style="background:url(/images/bg_table_2.png) repeat; border-left:1px solid #dad3a3; overflow:hidden; border-bottom:1px solid #dad3a3; font-size:15px; color:#847C50; border-right:1px solid #dad3a3;"> 
     <!-- start line -->
-    <div class="lineactivate" style="overflow:hidden;">
-      <div class="" style="height:20px; float:left; padding-top:8px; padding-left:16px; width:402px; border-right:1px solid #dad3a3;">Recipe 1</div>
-      <div class="" style="height:23px; width:40px; padding-top:5px; padding-left:17px; float:left;"><a href="#"><img src="/images/plus_icon.png" style="padding-left:12px;"/></a></div>
+    <div id="other_recipes" style="overflow:hidden;">
+      <%=render :partial => "source_recipes"%>
     </div>
     <!-- end line--> 
   </div>

@@ -12,7 +12,7 @@
   <div class="my_menus_link" style="margin-bottom:23px;">
     <%=link_to image_tag('/images/my_menus.png'), "#"%>
   </div>
-<%elsif controller.controller_name == 'sources'%>
+<%elsif controller.controller_name == 'sources' || 'recipes'%>
   <div class="chef_menu" style="margin-bottom:12px;">
     <%=link_to image_tag('/images/cook.png'), user_path(current_user)%>
   </div>

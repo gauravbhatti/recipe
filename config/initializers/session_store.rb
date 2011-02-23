@@ -1,6 +1,6 @@
 # Be sure to restart your server when you modify this file.
 
-Recipe::Application.config.session_store :cookie_store, :key => '_recipe_session'
+OnlineRecipe::Application.config.session_store :cookie_store, :key => '_online_recipe_session'
 
 # Use the database for sessions instead of the cookie-based default,
 # which shouldn't be used to store highly confidential information

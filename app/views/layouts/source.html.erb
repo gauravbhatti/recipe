@@ -9,7 +9,11 @@
   <%= stylesheet_link_tag "main" %>
   <%= stylesheet_link_tag "modalbox", :media=> "screen" %> 
   <%= csrf_meta_tag %>
-  <title>Sources Page</title>
+  <%if params[:type]%>
+    <title><%=params[:type].capitalize.pluralize%> Page</title>
+  <%else%>
+    <title>Recipes Page</title>
+  <%end%>
   <script>
       Cufon.replace('.special_font');
   </script>

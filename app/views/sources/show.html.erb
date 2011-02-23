@@ -16,12 +16,19 @@
         </div>
       </div>
       <div class="img_content_cook" style="overflow:hidden; width:589px;">
-        <div class="recipe_preview" style="width:235px; height:215px; float:left; margin:18px 30px 0 0; border:1px solid #e7b36f;">
-        <% if @source.photo? %>
-          <%= image_tag @source.photo.url(:medium) %>
-        <% else %>
-          <%= image_tag "/images/no-image2.jpg" %>
-        <% end %>
+        <div style="width:235px;height:250px;float:left;margin:18px 30px 0 0;">
+          <div class="recipe_preview" style="width:235px; height:215px; border:1px solid #e7b36f;">
+            <% if @source.photo? %>
+              <%= image_tag @source.photo.url(:medium) %>
+            <% else %>
+              <%= image_tag "/images/no-image2.jpg" %>
+            <% end %>
+          </div>
+          <div style="margin-top:10px;font-size:15px">
+            <%if @source.user == current_user%>
+              <%=link_to image_tag("/images/edit_icon.png") + "edit", edit_source_path(@source), :style=>"color:#bb450f;"%>
+            <%end%>
+          </div>
         </div>
         <div class="cook_name" style="float:left; overflow:hidden; width:296px; margin-top:18px;">
           <div class="cookname" style="margin-bottom:6px;">
@@ -44,11 +51,6 @@
             <span style="font-size:15px; color:#aa6426;"></span>
           </div>
         </div>
-      </div>
-      <div style="margin-top:20px;font-size:15px">
-        <%if @source.user == current_user%>
-          <%=link_to image_tag("/images/edit_icon.png") + "edit", edit_source_path(@source), :style=>"color:#bb450f;"%>
-        <%end%>
       </div>
       
       <div class="comments_writeandsend" style="overflow:hidden;">

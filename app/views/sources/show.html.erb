@@ -31,15 +31,17 @@
           </div>
         </div>
         <div class="cook_name" style="float:left; overflow:hidden; width:296px; margin-top:18px;">
-          <div class="cookname" style="margin-bottom:6px;">
+          <div class="cookname" style="margin-bottom:10px;">
             <span style="color:#d58c4c; font-size:20px;">Title</span>
             <span style="float:right; font-size:15px; color:#aa6426;"><%=@source.title%></span>
           </div>
-          <div class="mmmfactor" style="margin-bottom:6px;">
+          <div class="mmmfactor" style="margin-bottom:10px;">
             <span style="color:#d58c4c; font-size:20px;">Rating</span>
-            <span class="stars_rating" style="float:right;"><img src="/images/star_rate.png" /><img src="/images/star_rate.png" /><img src="/images/star_rate.png" /><img src="/images/star_rate.png" /><img src="/images/star_rate.png" /></span>
+            <span class="stars_rating" style="float:right;">
+              <%= ratings_for @source, :remote_options => {:url => rate_source_path(@source)} %>
+            </span>
           </div>
-          <div class="difficulty" style="margin-bottom:6px;">
+          <div class="difficulty" style="margin-bottom:10px;">
             <span style="color:#d58c4c; font-size:20px;">Url</span>
             <span style="float:right; font-size:15px; color:#aa6426;"><%=@source.url%></span>
           </div>

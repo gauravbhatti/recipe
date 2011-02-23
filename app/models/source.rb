@@ -14,4 +14,6 @@ class Source < ActiveRecord::Base
   
   TYPES = ["book", "magazine", "website_blog", "other"]
   
+  ajaxful_rateable :stars => 5, :dimensions => []
+  
 end

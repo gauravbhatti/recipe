@@ -12,10 +12,17 @@ OnlineRecipe::Application.routes.draw do
       post 'save_image'
       get 'other_recipes'
     end
+    member do
+      post 'rate'
+    end
   end
   
   resources :comments
-  resources :recipes
+  resources :recipes do
+    member do
+      post 'rate'
+    end
+  end
   
   match 'books' => 'sources#index', :type => "book"
   match 'magazines' => 'sources#index', :type => "magazine"

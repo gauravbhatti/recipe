@@ -801,9 +801,9 @@ body{
 
 .lineactivate .rating{
 	height:23px;
-	width:115px;
-	padding-top:5px;
-	padding-left:5px;
+	width:120px;
+	padding-top:1px;
+	padding-left:0px;
 	float:left;
 	border-right:1px solid #dad3a3;
 }

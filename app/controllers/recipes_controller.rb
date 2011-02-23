@@ -57,4 +57,13 @@ class RecipesController < ApplicationController
     end
   end
   
+  def rate
+    @recipe = Recipe.find(params[:id])
+    @recipe.rate(params[:stars], current_user, params[:dimension])
+    render :update do |page|
+      page.replace_html @recipe.wrapper_dom_id(params), ratings_for(@recipe, params.merge(:wrap => false))
+      page.visual_effect :highlight, @recipe.wrapper_dom_id(params)
+    end
+  end
+  
 end

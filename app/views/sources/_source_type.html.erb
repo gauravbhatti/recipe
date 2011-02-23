@@ -2,7 +2,7 @@
   <div class="title"><%=link_to source.title, source_path(source.id)%></div>
   <div class="author"><%=source.author%></div>
   <div class="rating">
-    <img src="/images/star_rate.png" /><img src="/images/star_rate.png" /><img src="/images/star_rate.png" />
+    <%= ratings_for source, :static %>
   </div>
   <div class="delete">
     <%=link_to_remote image_tag('/images/close_table.png', :title=>"Delete"), 

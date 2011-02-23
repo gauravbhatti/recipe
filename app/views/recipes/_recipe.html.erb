@@ -2,7 +2,7 @@
   <div class="title"><%=link_to recipe.title, recipe_path(recipe.id)%></div>
   <div class="author"><%=recipe.author%></div>
   <div class="rating">
-    <img src="/images/star_rate.png" /><img src="/images/star_rate.png" /><img src="/images/star_rate.png" />
+    <%= ratings_for recipe, :static, {:dimension => :difficulty} %>
   </div>
   <div class="delete">
     <%=link_to_remote image_tag('/images/close_table.png', :title=>"Delete"), 
